@@ -268,7 +268,7 @@ IT Student
 IT Student  
 📍 Rawalpindi, Pakistan  
 📧 Email: gqitspecialist@gmail.com 
-🔗 [LinkedIn](https://www.linkedin.com/in/ghulam-qadir-07a982365)
+🔗 [LinkedIn](https://www.linkedin.com/in/ghulam-qadir-07a982365/)
 
 Social 📱
 

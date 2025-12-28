@@ -273,7 +273,8 @@ IT Student
 Social 📱
 
 📧 Email:coreittech1@gmail.com  
-📹 YouTube: https://www.youtube.com/@CoreITTech1  
+📹 YouTube1: https://www.youtube.com/@CoreITTech1  
+📹 YouTube2: https://www.youtube.com/@CoreITTech
 📸 Instagram: https://www.instagram.com/coreit.tech  
 📘 Facebook: https://www.facebook.com/share/1AmgLDUnc9/
 

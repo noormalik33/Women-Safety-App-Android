@@ -199,23 +199,13 @@ git clone https://github.com/noormalik33/Women-Safety-App-Android.git
 
 ---
 
-## 📸 Screenshots
+| Dashboard | SOS Alert | Spy Detector |
+|:---:|:---:|:---:|
+| ![Dashboard](screenshots/dashboard.png) | ![SOS](screenshots/sos.png) | ![Spy Detector](screenshots/spy.png) |
 
-### Dashboard | SOS Alert | Spy Detector
-
-```html
-<img src="screenshots/dashboard.png" width="250" />
-<img src="screenshots/sos.png" width="250" />
-<img src="screenshots/spy.png" width="250" />
-```
-
-### Offline Mode | Navigation | Notes
-
-```html
-<img src="screenshots/offline.png" width="250" />
-<img src="screenshots/nav.png" width="250" />
-<img src="screenshots/otes.pngn" width="250" />
-```
+| Offline Mode | Navigation | Feedback/Notes |
+|:---:|:---:|:---:|
+| ![Offline Mode](screenshots/offline.png) | ![Navigation](screenshots/nav.png) | ![Notes](screenshots/notes.png) |
 
 ---
 

@@ -257,14 +257,14 @@ IT Student
 **Ghulam Qadir**  
 IT Student  
 📍 Rawalpindi, Pakistan  
-📧 Email: gqitspecialist@gmail.com 
+📧 Email: gqitspecialist@gmail.com   
 🔗 [LinkedIn](https://www.linkedin.com/in/ghulam-qadir-07a982365/)
 
 Social 📱
 
 📧 Email:coreittech1@gmail.com  
 📹 YouTube1: https://www.youtube.com/@CoreITTech1  
-📹 YouTube2: https://www.youtube.com/@CoreITTech
+📹 YouTube2: https://www.youtube.com/@CoreITTech  
 📸 Instagram: https://www.instagram.com/coreit.tech  
 📘 Facebook: https://www.facebook.com/share/1AmgLDUnc9/
 

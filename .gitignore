@@ -66,3 +66,7 @@ app/google-services.json
 
 # Passwords or sensitive text files
 *.txt
+
+/release/
+
+Andriod App Bundle Keystore Password.txt

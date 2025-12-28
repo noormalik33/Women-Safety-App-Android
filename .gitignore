@@ -60,3 +60,9 @@ ehthumbs.db
 Thumbs.db
 
 app/google-services.json
+
+*.jks
+*.keystore
+
+# Passwords or sensitive text files
+*.txt

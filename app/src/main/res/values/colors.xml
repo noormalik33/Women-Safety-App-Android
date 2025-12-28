@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Theme Colors -->
+    <color name="purple_darkest">#2E073F</color>
+    <color name="purple_normal">#C8A1E0</color>
+    <color name="purple_white">#EBD3F8</color>
+
+    <!-- Text & UI -->
+    <color name="text_light">#FFFFFF</color>
+    <color name="glass_fill_transparent">#20EBD3F8</color>
+    <color name="glass_border_light">#50C8A1E0</color>
+</resources>

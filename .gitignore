@@ -1,0 +1,62 @@
+# Android Studio / IntelliJ
+*.iml
+.gradle
+.idea/
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Android
+.navigation/
+captures/
+
+# Local configuration file (DO NOT COMMIT)
+local.properties
+
+# Build folders
+/build
+.externalNativeBuild
+.cxx
+
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# ART / Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Proguard
+proguard/
+
+# Logs
+*.log
+
+# Keystore files (CRITICAL)
+*.jks
+*.keystore
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+ehthumbs.db
+Thumbs.db
+
+app/google-services.json

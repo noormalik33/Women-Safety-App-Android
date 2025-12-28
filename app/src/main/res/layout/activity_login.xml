@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_darkest"
+    android:fillViewport="true">
+
+    <!-- Single, outer CardView for the entire content container -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp">
+
+        <!-- Main Content Wrapper -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/glass_card_background"
+            android:paddingBottom="30dp">
+
+            <!-- 🔹 PNG IMAGE (Fixed position above the form) -->
+            <ImageView
+                android:id="@+id/myImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/women"
+                android:elevation="12dp"
+                android:scaleType="centerCrop"/>
+
+            <!-- 🔹 Form and App Title Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="30dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/txtLoginTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Women Safety App"
+                    android:textColor="@color/purple_white"
+                    android:textSize="38sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="30dp"/>
+
+                <!-- Email -->
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Gmail Address"
+                    android:background="@drawable/input_field_glass"
+                    android:textColor="@color/text_light"
+                    android:textColorHint="@color/purple_normal"
+                    android:padding="15dp"/>
+
+                <!-- Password (MAX LENGTH 6 ADDED) -->
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLength="6"
+                    android:background="@drawable/input_field_glass"
+                    android:textColor="@color/text_light"
+                    android:textColorHint="@color/purple_normal"
+                    android:padding="15dp"/>
+
+                <!-- Login Button -->
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/button_background"
+                    android:text="L O G I N"
+                    android:textColor="@color/text_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <!-- Signup -->
+                <TextView
+                    android:id="@+id/txtSignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Don't have an account? Create one"
+                    android:textColor="@color/purple_normal"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <!-- 🔹 Meet Developer Team Text -->
+            <TextView
+                android:id="@+id/txtMeetTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Meet Our Developer Team"
+                android:textColor="@color/purple_white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- 🔹 Social Icons - Clickable -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/iconYoutube"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    android:background="@drawable/glass_card_background"
+                    android:src="@drawable/youtube" />
+
+                <ImageView
+                    android:id="@+id/iconInstagram"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    android:background="@drawable/glass_card_background"
+                    android:src="@drawable/instagram" />
+
+                <ImageView
+                    android:id="@+id/iconFacebook"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    android:background="@drawable/glass_card_background"
+                    android:src="@drawable/facebook" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</ScrollView>

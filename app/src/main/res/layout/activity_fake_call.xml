@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mom calling..."
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/btnDecline"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@android:drawable/sym_call_missed"
+            android:background="#FF0000"
+            android:padding="15dp"
+            android:layout_marginEnd="60dp"/>
+
+        <ImageView
+            android:id="@+id/btnAccept"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@android:drawable/sym_call_incoming"
+            android:background="#00FF00"
+            android:padding="15dp"/>
+    </LinearLayout>
+</RelativeLayout>

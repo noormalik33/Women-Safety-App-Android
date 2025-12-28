@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_darkest"
+    android:fillViewport="true">
+
+    <!-- CardView to apply the glassmorphism effect and rounded corners -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="30dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp">
+
+        <!-- Main Content Wrapper: This uses the glass background and stacks elements -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/glass_card_background"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingBottom="30dp">
+
+            <!-- 🔹 PNG IMAGE (Central Icon) -->
+            <ImageView
+                android:id="@+id/myImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/register"
+                android:elevation="12dp"
+                android:scaleType="centerCrop"/>
+
+            <!-- Form Fields Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="30dp">
+
+                <!-- Title: Updated color and size -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:text="Create Account"
+                    android:textColor="@color/purple_white"
+                    android:textSize="38sp"
+                    android:textStyle="bold" />
+
+                <!-- Full Name Field -->
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/input_field_glass"
+                    android:hint="Full Name"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textColor="@color/text_light"
+                    android:textColorHint="@color/purple_normal"
+                    android:textSize="17sp" />
+
+                <!-- Contact Field (MAX LENGTH 11 ADDED) -->
+                <EditText
+                    android:id="@+id/edtContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/input_field_glass"
+                    android:hint="Contact Number (11 digits)"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:padding="15dp"
+                    android:textColor="@color/text_light"
+                    android:textColorHint="@color/purple_normal"
+                    android:textSize="17sp" />
+
+                <!-- Email Field -->
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/input_field_glass"
+                    android:hint="Gmail Address"
+                    android:inputType="textEmailAddress"
+                    android:padding="15dp"
+                    android:textColor="@color/text_light"
+                    android:textColorHint="@color/purple_normal"
+                    android:textSize="17sp" />
+
+                <!-- Password Field (MAX LENGTH 6 ADDED) -->
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/input_field_glass"
+                    android:hint="Password (max 6 characters)"
+                    android:inputType="textPassword"
+                    android:maxLength="6"
+                    android:padding="15dp"
+                    android:textColor="@color/text_light"
+                    android:textColorHint="@color/purple_normal"
+                    android:textSize="17sp" />
+
+                <!-- Signup Button -->
+                <Button
+                    android:id="@+id/btnSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@null"
+                    android:text="R E G I S T E R"
+                    android:textColor="@color/text_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Link to Login -->
+                <TextView
+                    android:id="@+id/txtLoginLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="5dp"
+                    android:text="Already have an account? Login"
+                    android:textColor="@color/purple_normal"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

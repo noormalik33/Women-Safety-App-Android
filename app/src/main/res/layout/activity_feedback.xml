@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_darkest"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="My Safe Notes"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:text="Save important details or feedback here."
+            android:textColor="@color/purple_normal"
+            android:textSize="16sp" />
+
+        <!-- Title Input -->
+        <EditText
+            android:id="@+id/edtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/input_field_glass"
+            android:hint="Title (e.g., Harassment Incident)"
+            android:inputType="textCapSentences"
+            android:padding="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B3FFFFFF" />
+
+        <!-- Date Input (Optional) -->
+        <EditText
+            android:id="@+id/edtDate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/input_field_glass"
+            android:hint="Date (DD/MM/YYYY)"
+            android:inputType="date"
+            android:padding="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B3FFFFFF" />
+
+        <!-- Content Input (Big Box) -->
+        <EditText
+            android:id="@+id/edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/input_field_glass"
+            android:gravity="top|start"
+            android:hint="Write your note or feedback here..."
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B3FFFFFF" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveNote"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_background"
+            android:text="SAVE NOTE"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

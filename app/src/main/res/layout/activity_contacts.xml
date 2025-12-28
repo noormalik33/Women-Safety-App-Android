@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_darkest"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emergency Contacts"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOS messages will be sent to these numbers."
+        android:textColor="#B3FFFFFF"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/phone1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Guardian Number 1"
+        android:background="@android:color/white"
+        android:padding="15dp"
+        android:inputType="phone"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:id="@+id/phone2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Guardian Number 2"
+        android:background="@android:color/white"
+        android:padding="15dp"
+        android:inputType="phone"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:id="@+id/phone3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Guardian Number 3"
+        android:background="@android:color/white"
+        android:padding="15dp"
+        android:inputType="phone"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Save Contacts"
+        android:backgroundTint="@color/purple_normal"/>
+
+</LinearLayout>

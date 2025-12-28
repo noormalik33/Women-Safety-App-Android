@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_darkest"
+    tools:context=".DashboardActivity">
+
+    <!-- VIEW 1: DASHBOARD (HOME GRID) -->
+    <ScrollView
+        android:id="@+id/scrollDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <!-- HEADER -->
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:text="Hello, User 👋"
+                android:textColor="@color/text_light"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Stay safe, stay connected."
+                android:textColor="@color/purple_normal"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tvGreeting"
+                app:layout_constraintTop_toBottomOf="@+id/tvGreeting" />
+
+            <!-- SOS BUTTON -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSOS"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="40dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="90dp"
+                app:cardElevation="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubtitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_sos_button"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@android:drawable/ic_lock_idle_alarm"
+                        app:tint="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SOS"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tap for Emergency"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- GRID MENU -->
+            <GridLayout
+                android:id="@+id/gridMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:columnCount="2"
+                android:padding="15dp"
+                android:rowCount="7"
+                app:layout_constraintTop_toBottomOf="@+id/cardSOS">
+
+                <!-- 1. Contacts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardContacts"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/contacts" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Contacts" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 2. Fake Call -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardFakeCall"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/fake_call" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Fake Call" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 3. Share Location -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/share_location" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Location" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 4. Helplines -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHelpline"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/helplines" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Helplines" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 5. Safe Walk -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardWalk"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/safe_walk" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Safe Walk" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 6. Nearby Help -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardNearby"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/police_nearby" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Police" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 7. Insta-Siren -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSiren"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@android:drawable/ic_lock_silent_mode_off" app:tint="#FF1744" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Siren" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 8. Hidden Camera -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHiddenCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/spy_detect" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Spy Detect" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 9. Danger Map -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardDangerMap"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/danger_map" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Danger Zone" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 10. COMPLAINT (RENAMED TO NOTES) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardComplaint"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/notes" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Notes" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 11. VIOLENT SHAKE -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardShake"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/glass_card_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <!-- Custom Icon: shake -->
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/shake" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" android:text="Violent Shake" android:textColor="@color/text_light" android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Empty Card for Balance -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp" />
+
+            </GridLayout>
+
+            <!-- SIGN OUT BUTTON -->
+            <Button
+                android:id="@+id/btnSignOut"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:background="@drawable/button_background"
+                android:backgroundTint="#D50000"
+                android:text="S I G N  O U T"
+                android:textColor="@color/text_light"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/gridMenu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- VIEW 2: INFO LIST (Hidden) -->
+    <ScrollView
+        android:id="@+id/scrollInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Info 💡"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp" />
+
+            <!-- LIST OF FEATURES (Uses item_info_card.xml) -->
+            <include layout="@layout/item_info_card" android:id="@+id/infoSOS" />
+            <include layout="@layout/item_info_card" android:id="@+id/infoContacts" />
+            <include layout="@layout/item_info_card" android:id="@+id/infoFakeCall" />
+            <include layout="@layout/item_info_card" android:id="@+id/infoLocation" />
+            <include layout="@layout/item_info_card" android:id="@+id/infoSiren" />
+            <include layout="@layout/item_info_card" android:id="@+id/infoSpy" />
+            <include layout="@layout/item_info_card" android:id="@+id/infoDanger" />
+            <include layout="@layout/item_info_card" android:id="@+id/infoComplaint" />
+            <include layout="@layout/item_info_card" android:id="@+id/infoOffline" />
+
+            <!-- ADDED: VIOLENT SHAKE INFO -->
+            <include layout="@layout/item_info_card" android:id="@+id/infoShake" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION BAR -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#2E073F"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

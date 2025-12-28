@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Women Safety</string>
+
+    <!-- Navigation Drawer Strings -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Default Fragment Strings (Required to fix your AAPT error) -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- Firebase Config Strings -->
+    <string name="default_web_client_id">274974769966-vuh5fdqdt4788v57hbc1rh09n925onl1.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId">274974769966</string>
+    <string name="google_api_key">AIzaSyBlY1rLKf_Xff87x-dyQ8zpsRXGSzwdHAA</string>
+    <string name="google_app_id">1:274974769966:android:c919483a1804ee9ea0b0bf</string>
+    <string name="google_crash_reporting_api_key">AIzaSyBlY1rLKf_Xff87x-dyQ8zpsRXGSzwdHAA</string>
+    <string name="google_storage_bucket">lab10firebaseproject-7e8d1.firebasestorage.app</string>
+    <string name="project_id">lab10firebaseproject-7e8d1</string>
+</resources>

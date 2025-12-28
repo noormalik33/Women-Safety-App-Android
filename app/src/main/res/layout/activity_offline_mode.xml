@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_darkest"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@android:drawable/stat_sys_data_bluetooth"
+        android:tint="#FFFFFF"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Offline SOS Mode"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internet? No Signal? \nBroadcast a distress signal to nearby devices via Bluetooth Mesh."
+        android:textColor="#B3FFFFFF"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:id="@+id/btnBroadcast"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:backgroundTint="#D50000"
+        android:text="BROADCAST SOS (OFF-GRID)"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Idle"
+        android:textColor="#00E676"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"/>
+
+</LinearLayout>
